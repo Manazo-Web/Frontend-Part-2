@@ -1,0 +1,186 @@
+
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+    aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Темный offcanvas</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ссылка</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Выпадающий список
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+        <button class="btn btn-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+
+
+<!-- Модальное окно LOGIN-->
+<div class="modal fade" id="login" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">Вход</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="inputLogin" class="form-label">Введите логин</label>
+            <input [(ngModel)]="LogLogin" name="LogLogin" type="text" class="form-control" id="inputLogin">
+          </div>
+          <div class="mb-3">
+            <label for="passLogin" class="form-label">Введите пароль</label>
+            <input [(ngModel)]="LogPassword" name="LogPassword" type="password" class="form-control" id="passLogin">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" (click)="LogClick()" class="btn btn-dark" data-bs-dismiss="modal">Войти</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно REGISTER -->
+<div class="modal fade bg-dark" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Регистрация</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="inputName" class="form-label">Имя</label>
+            <input [(ngModel)]="RegName" name="RegName" type="text" class="form-control" id="inputName">
+          </div>
+          <div class="mb-3">
+            <label for="inputSurname" class="form-label">Фамилия</label>
+            <input [(ngModel)]="RegSurname" name="RegSurname" type="text" class="form-control" id="inputSurname">
+          </div>
+          <div class="mb-3">
+            <label for="inputPhone" class="form-label">Телефон</label>
+            <input [(ngModel)]="RegNumber" name="RegNumber" type="tel" class="form-control" id="inputPhone">
+          </div>
+          <div class="mb-3">
+            <label for="InputEmail" class="form-label">Адрес электронной почты</label>
+            <input [(ngModel)]="RegEmail" name="RegEmail" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="inputLoginReg" class="form-label">Логин</label>
+            <input [(ngModel)]="RegLogin" name="RegLogin" type="text" class="form-control" id="inputLoginReg">
+          </div>
+          <div class="mb-3">
+            <label for="inputPassword" class="form-label">Пароль</label>
+            <input [(ngModel)]="RegPassword" name="RegPassword" type="password" class="form-control" id="inputPassword">
+          </div>
+          <div class="mb-3">
+            <label for="InputCountry" class="form-label">Страна</label>
+            <input [(ngModel)]="RegCountry" name="RegCountry" type="text" class="form-control" id="InputCountry">
+          </div>
+          <div class="mb-3">
+            <label for="InputCity" class="form-label">Город</label>
+            <input [(ngModel)]="RegCity" name="RegCity" type="text" class="form-control" id="InputCity">
+          </div>
+          <div class="mb-3">
+            <label for="InputStreet" class="form-label">Улица</label>
+            <input [(ngModel)]="RegStreet" name="RegStreet" type="text" class="form-control" id="InputStreet">
+          </div>
+          <div class="mb-3">
+            <label for="InputHome" class="form-label">Дом</label>
+            <input [(ngModel)]="RegZipcode" name="RegZipcode" type="text" class="form-control" id="InputHome">
+          </div>
+          <div class="mb-3">
+            <label for="InputCard" class="form-label">Банковская карточка</label>
+            <input [(ngModel)]="RegCreditCard" name="RegCard" type="text" class="form-control" id="InputCard">
+          </div>
+          <!-- Добавлено поле для загрузки фотографии -->
+          <div class="mb-3">
+            <label for="inputPhoto" class="form-label">Фотография</label>
+            <input [(ngModel)]="RegPhoto" name="RegPhoto" type="file" class="form-control" id="inputPhoto" accept="image/*">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Закрыть</button>
+        <button (click)="RegClick()" type="button" class="btn btn-dark">Зарегистрироваться</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <nav class="navbar navbar-dark bg-dark ">
+    <div class="container-fluid">
+
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          
+          <div class="d-flex">
+            <div class="container">
+              <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" style="margin: 5px;">
+                  <i class="bi bi-list"></i>
+              </button>
+            </div>
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <img class="logo-img-header" src="/assets/layaut_logo.png">
+            </a>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <form class="d-flex" role="search" >
+              <input [(ngModel)]="searchString" name="search" class="search-input form-control me-2 bg-dark text-white" type="search" placeholder="Введите для поиска" aria-label="Поиск">
+              <button (click)="sendSearchString()" id="button-search" class="btn btn-outline-light border-button" type="submit">Поиск</button>
+            </form>
+          </div>
+          <div class="d-flex align-items-center align-content-center justify-content-space-around ">
+  
+            <div class="text-end ">
+              <button id="login-button" type="button" class="btn btn-outline-light border-button" data-bs-toggle="modal" data-bs-target="#login" style="margin: 4px;">Вход</button>
+              <button type="button" class="btn btn-outline-light border-button" data-bs-toggle="modal" data-bs-target="#register" style="margin: 4px;">Регистрация</button>
+            </div>
+            
+            <button type="button" (click)="cartClick()" class="btn btn-outline-light border-button" style="margin: 4px;">
+              <i class="bi bi-cart3"></i>
+            </button>
+            
+            <button type="button" (click)="favoritesClick()" class="btn btn-outline-light border-button" style="margin: 4px;">
+              <i class="bi bi-heart"></i>
+            </button>
+            
+            <button type="button" class="btn btn-outline-light border-button" style="margin: 4px;">
+              <i class="bi bi-box-arrow-left"></i>
+            </button>
+            
+            <button type="button" (click)="userClick()" class="btn btn-outline-light border-button" style="margin: 4px;">
+              <i class="bi bi-person"></i>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
